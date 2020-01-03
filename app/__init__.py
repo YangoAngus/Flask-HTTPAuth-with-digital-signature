@@ -20,7 +20,7 @@ SECRET_KEY = '980d92b01709aed6c6a0c181e1d99db336e723da4130b844'
 TOKEN = sign(PUBLIC_KEY, SECRET_KEY)
 
 tokens = {
-    TOKEN:'iness@example.com'
+    TOKEN: 'iness@example.com'
     }
 auth = HTTPTokenAuth(scheme='Bearer')
 
@@ -41,12 +41,10 @@ def create_app():
     @app.route('/')
     def index():
         return '<a href="/api">Request to server without HTTP Authorization</a>'
-    
+
     @app.route('/api')
     @auth.login_required
     def api():
-        return jsonify({'auth':g.current_user})
+        return jsonify({'auth': g.current_user})
 
     return app
-
-
