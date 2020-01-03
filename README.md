@@ -11,7 +11,7 @@ pip install Flask-HTTPAuth
 
 Source code of example
 ----------------------------
-```
+```python
 from flask import Flask, jsonify, g
 from flask_httpauth import HTTPTokenAuth
 from app.utils.digital_signatures import sign, verify
@@ -54,7 +54,7 @@ def create_app():
 
 Functions for create keys, digital signature and verify digital signature
 ----------------------------
-```
+```python
 from hashlib import blake2b
 from hmac import compare_digest
 from os import urandom
