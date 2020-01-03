@@ -10,6 +10,7 @@ pip install Flask-HTTPAuth
 ```
 
 Source code of example
+----------------------------
 ```
 from flask import Flask, jsonify, g
 from flask_httpauth import HTTPTokenAuth
